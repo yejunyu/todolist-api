@@ -1,0 +1,56 @@
+# docker-compose.yml
+version: '3.8'
+
+services:
+  # 服务1: 我们的 Go API
+  api:
+    # 使用当前目录下的 Dockerfile 来构建镜像
+    build: .
+    # 给构建出的镜像取个名字
+    image: todolist-api:latest
+    # 容器重启策略：除非手动停止，否则总是重启
+    restart: unless-stopped
+    # 端口映射: 将宿主机的 8080 端口映射到容器的 8080 端口
+    ports:
+      - "8080:4000"
+    # 环境变量的定义
+    environment:
+      # APP_SERVER_PORT: 8080 # 这个可以不设，默认值就是 8080
+      # 关键：这里我们让 API 服务去连接名为 db 的容器
+      APP_DATABASE_HOST: db
+      APP_DATABASE_PORT: 5432
+      APP_DATABASE_USER: ${POSTGRES_USER} # 从 .env 文件读取
+      APP_DATABASE_PASSWORD: ${POSTGRES_PASSWORD}
+      APP_DATABASE_DBNAME: ${POSTGRES_DB}
+      APP_DATABASE_SSLMODE: disable
+    # 依赖关系：确保 db 服务先于 api 服务启动
+    depends_on:
+      db:
+        condition: service_healthy
+
+  # 服务2: PostgreSQL 数据库
+  db:
+    # 使用官方的 postgres 镜像
+    image: postgres:15-alpine
+    restart: unless-stopped
+    # 环境变量，用于初始化数据库
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    # 数据卷挂载：将容器内的 /var/lib/postgresql/data 目录挂载到宿主机
+    # 这样即使容器被删除，数据库的数据也会被保留
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    # 健康检查：Docker Compose 会定期检查数据库是否准备好接受连接
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+# 定义数据卷
+volumes:
+  postgres_data:

@@ -1,0 +1,18 @@
+server:
+  port: 4000
+
+database:
+  host: "117.72.37.213"
+  port: 5433
+  user: "user_chcyW8"
+  password: "password_RhcDpm"
+  dbname: "nextjs"
+  sslmode: "disable"
+
+test_database:
+  host: "117.72.37.213"
+  port: 5433
+  user: "user_chcyW8"
+  password: "password_RhcDpm"
+  dbname: "postgres"
+  sslmode: "disable"
