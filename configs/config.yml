@@ -16,3 +16,7 @@ test_database:
   password: "password_RhcDpm"
   dbname: "postgres"
   sslmode: "disable"
+
+jwt:
+  secret: "1234567890abcdef"
+  expire_hours: 72

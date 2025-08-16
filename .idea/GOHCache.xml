@@ -3,6 +3,27 @@
   <component name="GoORMHelperCache">
     <option name="schemaMapping">
       <map>
+        <entry key="APIError">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/pkg/ierr/error.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="AuthService">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/internal/services/auth_service.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="Claims">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/internal/services/auth_service.go" />
+            </set>
+          </value>
+        </entry>
         <entry key="Config">
           <value>
             <set>
@@ -10,10 +31,60 @@
             </set>
           </value>
         </entry>
+        <entry key="CreateTodoInput">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/internal/handlers/todo_handler.go" />
+            </set>
+          </value>
+        </entry>
         <entry key="DatabaseConfig">
           <value>
             <set>
               <option value="file://$PROJECT_DIR$/pkg/config/config.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="JWTConfig">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/pkg/config/config.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="LoginInput">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/internal/handlers/user_handler.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="LoginResponse">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/internal/handlers/user_handler.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="RegisterInput">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/internal/handlers/user_handler.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="RegisterResponse">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/internal/handlers/user_handler.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="Response">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/pkg/reponse/response.go" />
+              <option value="file://$PROJECT_DIR$/pkg/response/response.go" />
             </set>
           </value>
         </entry>
@@ -38,6 +109,20 @@
             </set>
           </value>
         </entry>
+        <entry key="User">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/internal/models/user.go" />
+            </set>
+          </value>
+        </entry>
+        <entry key="UserHandler">
+          <value>
+            <set>
+              <option value="file://$PROJECT_DIR$/internal/handlers/user_handler.go" />
+            </set>
+          </value>
+        </entry>
         <entry key="todoRepository">
           <value>
             <set>
@@ -52,24 +137,32 @@
         <entry key="file://$PROJECT_DIR$/cmd/server/main.go">
           <value>
             <ScannedPath>
-              <option name="lastModified" value="1755266085376" />
+              <option name="lastModified" value="1755350879104" />
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/docs/docs.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1755351053385" />
             </ScannedPath>
           </value>
         </entry>
         <entry key="file://$PROJECT_DIR$/internal/database/database.go">
           <value>
             <ScannedPath>
-              <option name="lastModified" value="1755269641485" />
+              <option name="lastModified" value="1755348661695" />
             </ScannedPath>
           </value>
         </entry>
         <entry key="file://$PROJECT_DIR$/internal/handlers/todo_handler.go">
           <value>
             <ScannedPath>
-              <option name="lastModified" value="1755264011911" />
+              <option name="lastModified" value="1755352126078" />
               <option name="schema">
                 <list>
                   <option value="TodoHandler" />
+                  <option value="CreateTodoInput" />
                 </list>
               </option>
             </ScannedPath>
@@ -82,10 +175,33 @@
             </ScannedPath>
           </value>
         </entry>
+        <entry key="file://$PROJECT_DIR$/internal/handlers/user_handler.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1755352039208" />
+              <option name="schema">
+                <list>
+                  <option value="UserHandler" />
+                  <option value="RegisterInput" />
+                  <option value="LoginInput" />
+                  <option value="RegisterResponse" />
+                  <option value="LoginResponse" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/internal/middleware/auth_middleware.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1755346923982" />
+            </ScannedPath>
+          </value>
+        </entry>
         <entry key="file://$PROJECT_DIR$/internal/middleware/err_handler.go">
           <value>
             <ScannedPath>
-              <option name="lastModified" value="1755265766289" />
+              <option name="lastModified" value="1755351177722" />
             </ScannedPath>
           </value>
         </entry>
@@ -99,7 +215,7 @@
         <entry key="file://$PROJECT_DIR$/internal/models/todo.go">
           <value>
             <ScannedPath>
-              <option name="lastModified" value="1755161598450" />
+              <option name="lastModified" value="1755341431783" />
               <option name="schema">
                 <list>
                   <option value="Todo" />
@@ -108,10 +224,22 @@
             </ScannedPath>
           </value>
         </entry>
+        <entry key="file://$PROJECT_DIR$/internal/models/user.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1755351590095" />
+              <option name="schema">
+                <list>
+                  <option value="User" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
         <entry key="file://$PROJECT_DIR$/internal/repository/repository.go">
           <value>
             <ScannedPath>
-              <option name="lastModified" value="1755250849880" />
+              <option name="lastModified" value="1755347448838" />
               <option name="schema">
                 <list>
                   <option value="todoRepository" />
@@ -130,19 +258,69 @@
         <entry key="file://$PROJECT_DIR$/internal/routes/routes.go">
           <value>
             <ScannedPath>
-              <option name="lastModified" value="1755264374152" />
+              <option name="lastModified" value="1755348109506" />
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/internal/services/auth_service.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1755353007104" />
+              <option name="schema">
+                <list>
+                  <option value="Claims" />
+                  <option value="AuthService" />
+                </list>
+              </option>
             </ScannedPath>
           </value>
         </entry>
         <entry key="file://$PROJECT_DIR$/pkg/config/config.go">
           <value>
             <ScannedPath>
-              <option name="lastModified" value="1755268361541" />
+              <option name="lastModified" value="1755348259012" />
               <option name="schema">
                 <list>
                   <option value="Config" />
                   <option value="ServerConfig" />
+                  <option value="JWTConfig" />
                   <option value="DatabaseConfig" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/pkg/ierr/error.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1755349419392" />
+              <option name="schema">
+                <list>
+                  <option value="APIError" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/pkg/reponse/response.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1755348936792" />
+              <option name="schema">
+                <list>
+                  <option value="Response" />
+                </list>
+              </option>
+            </ScannedPath>
+          </value>
+        </entry>
+        <entry key="file://$PROJECT_DIR$/pkg/response/response.go">
+          <value>
+            <ScannedPath>
+              <option name="lastModified" value="1755351177719" />
+              <option name="schema">
+                <list>
+                  <option value="Response" />
                 </list>
               </option>
             </ScannedPath>
@@ -152,12 +330,24 @@
     </option>
     <option name="tableStructMapping">
       <map>
+        <entry key="api_error" value="APIError" />
+        <entry key="auth_service" value="AuthService" />
+        <entry key="claims" value="Claims" />
         <entry key="config" value="Config" />
+        <entry key="create_todo_input" value="CreateTodoInput" />
         <entry key="database_config" value="DatabaseConfig" />
+        <entry key="jwt_config" value="JWTConfig" />
+        <entry key="login_input" value="LoginInput" />
+        <entry key="login_response" value="LoginResponse" />
+        <entry key="register_input" value="RegisterInput" />
+        <entry key="register_response" value="RegisterResponse" />
+        <entry key="response" value="Response" />
         <entry key="server_config" value="ServerConfig" />
         <entry key="todo" value="Todo" />
         <entry key="todo_handler" value="TodoHandler" />
         <entry key="todo_repository" value="todoRepository" />
+        <entry key="user" value="User" />
+        <entry key="user_handler" value="UserHandler" />
       </map>
     </option>
     <option name="lastTimeChecked" value="1755161543040" />
